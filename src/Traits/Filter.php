@@ -110,6 +110,7 @@ trait Filter
 
         $this->persistState('filters');
 
+        $this->dispatchBrowserEvent('pg:clear_multi_select::' . $this->tableName);
         $this->dispatchBrowserEvent('pg:clear_all_flatpickr::' . $this->tableName);
     }
 
